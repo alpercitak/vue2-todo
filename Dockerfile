@@ -7,10 +7,11 @@ FROM base AS build
 
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install
+COPY pnpm-lock.yaml ./
+RUN pnpm fetch
 
 COPY . .
+RUN pnpm i --offline
 RUN pnpm run build
 
 FROM nginx:1.18-alpine AS deploy

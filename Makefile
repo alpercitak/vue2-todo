@@ -1,3 +1,6 @@
+dev:
+	pnpm run dev
+	
 serve:
 	pnpm run serve
 
