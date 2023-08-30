@@ -2,22 +2,22 @@
 
 ## Project setup
 ```
-pnpm install
+pnpm i
 ```
 
 ### Compiles and hot-reloads for development
 ```
-pnpm run serve
+pnpm dev
 ```
 
 ### Compiles and minifies for production
 ```
-pnpm run build
+pnpm build
 ```
 
 ### Lints and fixes files
 ```
-pnpm run lint
+pnpm lint
 ```
 
 ### Customize configuration
