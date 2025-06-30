@@ -12,22 +12,22 @@ import { uuid } from 'vue-uuid';
 
 export default Vue.extend({
   name: 'TodoListAdd',
-  data () {
+  data() {
     return {
       newItem: '',
       uuid: uuid,
-    }
+    };
   },
   methods: {
     ...mapActions(['add']),
     addItem(): void {
-        if (!this.newItem) {
+      if (!this.newItem) {
         return;
       }
-      this.add({id: uuid.v1(), text: this.newItem});
+      this.add({ id: uuid.v1(), text: this.newItem });
       this.newItem = '';
     },
-  }
+  },
 });
 </script>
 
@@ -37,4 +37,3 @@ export default Vue.extend({
   gap: 8px;
 }
 </style>
-

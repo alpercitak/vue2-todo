@@ -11,8 +11,8 @@ import TodoList from './components/TodoList.vue';
 export default Vue.extend({
   name: 'App',
   components: {
-    TodoList
-  }
+    TodoList,
+  },
 });
 </script>
 

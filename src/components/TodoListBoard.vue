@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>{{ title }}</div>
-    <div v-for="item in data" v-bind:key="item.id" class="todo-item" :class="{ 'done': item.isDone }">
+    <div v-for="item in data" v-bind:key="item.id" class="todo-item" :class="{ done: item.isDone }">
       <div>{{ item.text }}</div>
       <div class="actions">
         <div class="invert" v-on:click="invertItem(item.id)">Invert</div>
@@ -29,8 +29,8 @@ export default Vue.extend({
     },
     invertItem(id: string): void {
       this.invert(id);
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -42,7 +42,7 @@ export default Vue.extend({
   flex: 1;
 
   .todo-item {
-    border: 1px solid #EEE;
+    border: 1px solid #eee;
     display: flex;
     flex-direction: row;
     padding: 4px;

@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {mapGetters, mapState} from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 import TodoListAdd from './TodoListAdd.vue';
 import TodoListBoard from './TodoListBoard.vue';
 
