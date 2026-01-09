@@ -26,7 +26,7 @@ importers:
         version: 5.62.0(eslint@7.32.0)(typescript@4.5.5)
       '@vitejs/plugin-vue2':
         specifier: ^2.2.0
-        version: 2.3.3(vite@4.5.14(sass@1.97.2))(vue@2.7.16)
+        version: 2.3.4(vite@4.5.14(sass@1.97.2))(vue@2.7.16)
       '@vue/eslint-config-prettier':
         specifier: ^7.1.0
         version: 7.1.0(eslint@7.32.0)(prettier@2.8.8)
@@ -397,11 +397,11 @@ packages:
     resolution: {integrity: sha512-07ny+LHRzQXepkGg6w0mFY41fVUNBrL2Roj/++7V1txKugfjm/Ci/qSND03r2RhlJhJYMcTn9AhhSSqQp0Ysyw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@vitejs/plugin-vue2@2.3.3':
-    resolution: {integrity: sha512-qexY6+bbwY8h0AZerzUuGywNTi0cLOkbiSbggr0R3WEW95iB2hblQFyv4MAkkc2vm4gZN1cO5kzT1Kp6xlVzZw==}
+  '@vitejs/plugin-vue2@2.3.4':
+    resolution: {integrity: sha512-LgqtRRedJb1KdmgcllwGX0gtlPvOvtR6pITXmqxGwQhBZaAysg0Hd7wvj3sjCsj4+PENWsqS7O+ceYSOgJ+H9g==}
     engines: {node: ^14.18.0 || >= 16.0.0}
     peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
       vue: ^2.7.0-0
 
   '@volar/language-core@1.11.1':
@@ -1469,7 +1469,7 @@ snapshots:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-vue2@2.3.3(vite@4.5.14(sass@1.97.2))(vue@2.7.16)':
+  '@vitejs/plugin-vue2@2.3.4(vite@4.5.14(sass@1.97.2))(vue@2.7.16)':
     dependencies:
       vite: 4.5.14(sass@1.97.2)
       vue: 2.7.16
