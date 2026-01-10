@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.ts,.vue src"
   },
   "dependencies": {
-    "vue": "^2.6.14",
+    "vue": "^3.0.0",
     "vue-uuid": "^3.0.0",
     "vuex": "^3.6.2"
   },
