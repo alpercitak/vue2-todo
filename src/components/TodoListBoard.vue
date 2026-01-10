@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue';
+import Vue, { type PropType } from 'vue';
 import { mapActions } from 'vuex';
 import TodoItem from '@/types/TodoItem';
 
