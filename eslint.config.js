@@ -1,27 +1,45 @@
-// eslint.config.js
-import { FlatCompat } from '@eslint/eslintrc';
+import vue from 'eslint-plugin-vue';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import vueParser from 'vue-eslint-parser';
 import js from '@eslint/js';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-});
+import globals from 'globals';
 
 export default [
-  ...compat.config({
-    root: true,
-    env: {
-      node: true,
+  js.configs.recommended,
+  {
+    files: ['**/*.vue'],
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: tsParser,
+        ecmaVersion: 2020,
+        sourceType: 'module',
+      },
+      globals: globals.browser,
     },
-    extends: [
-      'plugin:vue/essential',
-      'eslint:recommended',
-      '@vue/eslint-config-typescript',
-      '@vue/eslint-config-prettier/skip-formatting',
-    ],
-    parserOptions: {
+    plugins: {
+      vue,
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      ...vue.configs.essential.rules,
+      ...tseslint.configs.recommended.rules,
+    },
+  },
+  {
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: tsParser,
       ecmaVersion: 2020,
+      sourceType: 'module',
+      globals: globals.browser,
     },
-    rules: {},
-  }),
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+    },
+  },
 ];
