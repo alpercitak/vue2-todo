@@ -1,15 +1,12 @@
-FROM node:25-alpine AS build
+FROM oven/bun:1.3.6 AS build
 
 WORKDIR /app
 
-RUN npm i -g pnpm
-
-COPY pnpm-lock.yaml ./
-RUN pnpm fetch
+COPY bun.lock package.json ./
+RUN bun install --frozen-lockfile
 
 COPY . .
-RUN pnpm i --offline
-RUN pnpm run build
+RUN bun run build
 
 FROM nginx:1.29-alpine AS deploy
 
