@@ -12,11 +12,13 @@
     "useDefineForClassFields": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
   "exclude": ["node_modules"]
